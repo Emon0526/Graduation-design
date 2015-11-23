@@ -29,7 +29,7 @@
 .title-one {
     height: 35px;
     width: 275px;
-    background-color: #B61D1D;
+    background-color: #56C4CF;
     color: white;
     margin-top: -10px;
 }
@@ -64,7 +64,7 @@ h5 {
     margin-top: 30px;
     width: 1174px;
     height: 2px;
-    background-color: #b61d1d;
+    background-color: #56C4CF;
 }
 .info-list {
     height: 250px;
@@ -101,7 +101,7 @@ h5 {
     height: 40px;
     width: 173px;
     margin-left: 28px;
-    color:#b61d1d;
+    color:#56C4CF;
     font-size: 16px;
 }
 #popular-product {
@@ -113,6 +113,6 @@ a {
     color:black;
 }
  .content-list a:hover {
-    color: red;
+    color: #56C4CF;
     text-decoration: none;
 }

@@ -13,7 +13,7 @@
     text-decoration: none;
 }
 #navgation ul a:hover {
-    color: #b61d1d;
+    color: #56C4CF;
     text-decoration: none;
 }
 #navgation ul li {
@@ -22,7 +22,7 @@
     line-height: 35px;
     text-align: center;
     position: relative;
-    background: #b61d1d;
+    background: #56C4CF;
 }
 #navgation ul li:hover {
     background: #ddd;

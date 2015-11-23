@@ -1,9 +1,9 @@
 a {
-    color: #b61d1d;
+    color: #56C4CF;
 }
 .category {
     border: 1px solid #F2DEDE;
-    color: #b61d1d;
+    color: #56C4CF;
     margin: 0 5px 10px 0;
     font-size: 14px;
 }
@@ -28,7 +28,7 @@ a {
     line-height: 1.4em;
     height: 2.8em;
     overflow: hidden;
-    color: #b61d1d;
+    color: #56C4CF;
 }
 .ellipsis::after {
     content: "...";
@@ -49,7 +49,7 @@ a {
     left: 2px;
 }
 .btn-defaults {
-    color: #b61d1d;
+    color: #56C4CF;
     background-color: #fff;
     border-color: #ccc;
 }
@@ -63,7 +63,7 @@ a {
 }
 .font-color {
     color: #fff;
-    background-color: #b61d1d;
+    background-color: #56C4CF;
 }
 .number-page.font-color:hover {
     color: #fff;
@@ -72,10 +72,10 @@ a {
     color: #8A8A8A;
 }
 .number-page:hover {
-    border-color: #b61d1d;
-    color: #b61d1d;
+    border-color: #56C4CF;
+    color: #56C4CF;
 }
 .active:hover {
-    border-color: #b61d1d;
-    color: #b61d1d;
+    border-color: #56C4CF;
+    color: #56C4CF;
 }
