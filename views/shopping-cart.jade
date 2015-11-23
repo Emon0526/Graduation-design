@@ -1,0 +1,89 @@
+html(lang="en")
+    head
+        title= "category"
+        link(rel="stylesheet" href="./stylesheets/layoutStyle.css")
+        link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="./stylesheets/shoppingCart.css")
+        link(rel="stylesheet" href="./stylesheets/search.css")
+
+    body
+        include header.html
+        include search.html
+        .container
+            .cart-shop
+                .cart-shops-name
+                    | 商家:
+                .cart-goods-box
+                    .cart-a
+                        .cart-title-box
+                            ul.cart-title
+                                li.cart-all
+                                    input( type="checkbox" class="my_all_check" name="all-check" id="add_goods_tobuy_24124")
+                                    span(class="alls-check") 全选
+                                li.cart-goods 商品名称
+                                li.cart-promotion 优惠
+                                li.cart-rmb 价格
+                                li.cart-number 数量
+                                li.cart-total 小计
+                                li.cart-operate
+                                    ul.cart-title_leftbg
+                                        li.cart-title-left-bg2 操作
+
+                    .shopping-cart_goods
+                        if data.length === 0
+                            ="购物车现在没有商品"
+                        for shoppingCartGoods in data
+                            ul.cart-content.cart_goods
+                                li.cart-content-table1
+                                    input(data-id="#{shoppingCartGoods.id}" type="checkbox" class="add-goods-tobuy-choose-0" name="add_goods_tobuy_choose_0" id="add_goods_tobuy_24124")
+                                li.cart-content-table1
+                                    a(href="/product-details")
+                                    img(class="img-cursor" src=shoppingCartGoods.img)
+                                li.cart-content-table3
+                                    = shoppingCartGoods.name
+                                li.cart-content-table4
+                                    = shoppingCartGoods.type
+                                li.cart-content-table5
+                                    input(data-id="#{shoppingCartGoods.id}" class="price" type="text" name="price" value=shoppingCartGoods.price readonly)
+                                li.cart-content-table6
+                                    input(data-id="#{shoppingCartGoods.id}" class="changes" type="button" name="add" value="-")
+                                    input(data-id="#{shoppingCartGoods.id}" size='2' class="cart-goods-count" name="number" type="text" value=shoppingCartGoods.number)
+                                    input(data-id="#{shoppingCartGoods.id}" class="changes" type="button" name="reduction" value="+")
+                                li.cart-content-table7
+                                    input(data-id="#{shoppingCartGoods.id}" class="subtotal" type="text" value=shoppingCartGoods.price * shoppingCartGoods.number readonly)
+                                li.cart-content-table8
+                                    a(href="" class = "cart_goods_delete" id = shoppingCartGoods.id data-toggle="modal" data-target="#confirm-delete" )  删除
+            .show_buy_cart_price_all
+                .cart-total-box
+                    ul.cart-content-footer
+                        li.footer-center
+                            span.amount-title
+                            em.amount-title
+                                | 共节省: 100
+                                span(class="save")
+                                | 总价：
+                                input(class="total" value="0" readonly)
+                    ul.footer-button
+                        li
+                            a(href="/")
+                                .continue-cart 继续购物
+                        li
+                            a(href="/pay")
+                                .buy-now 去结算
+        div.modal.fade#confirm-delete
+            div.modal-dialog
+                div.modal-content
+                    div.modal-header
+                        | 请确认
+                    div.modal-body
+                        | 确认删除该记录吗？
+                    div.modal-footer
+                        button(type="button" class="btn btn-default" data-dismiss="modal")    
+                            | 取消
+                        a(class="btn btn-danger btn-ok" data-dismiss="modal" id="delete")    
+                            |删除记录
+        
+        include footer.html
+        script(src="./javascripts/shopping-cart.js")
+        script(src="./jquery/dist/jquery.js")
+        script(src="./bootstrap/dist/js/bootstrap.js")

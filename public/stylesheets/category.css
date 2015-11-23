@@ -1,0 +1,81 @@
+a {
+    color: #b61d1d;
+}
+.category {
+    border: 1px solid #F2DEDE;
+    color: #b61d1d;
+    margin: 0 5px 10px 0;
+    font-size: 14px;
+}
+.char-style {
+    font-size: 12px;
+}
+.page-detail {
+    line-height: 34px;
+}
+.border {
+    border: 1px solid #F2DEDE;
+    margin-top: 1px;
+}
+.title-margin {
+    margin-top: 10px;
+}
+.info-margin-bottom {
+    margin-bottom: 20px;
+}
+.info-div {
+    position: relative;
+    line-height: 1.4em;
+    height: 2.8em;
+    overflow: hidden;
+    color: #b61d1d;
+}
+.ellipsis::after {
+    content: "...";
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px 1px 45px;
+    background: url(/images/category/ellipsis_bg.png) repeat-y;
+}
+.img-cursor {
+    height: 224px;
+}
+.img-cursor:hover {
+    position: relative;
+    cursor: pointer;
+    top: 2px;
+    left: 2px;
+}
+.btn-defaults {
+    color: #b61d1d;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.text-cursor:hover {
+    cursor: pointer;
+    color: #A757A8;
+    text-decoration: underline;
+}
+.color-font {
+    margin-left: 2px;
+}
+.font-color {
+    color: #fff;
+    background-color: #b61d1d;
+}
+.number-page.font-color:hover {
+    color: #fff;
+}
+.disabled {
+    color: #8A8A8A;
+}
+.number-page:hover {
+    border-color: #b61d1d;
+    color: #b61d1d;
+}
+.active:hover {
+    border-color: #b61d1d;
+    color: #b61d1d;
+}

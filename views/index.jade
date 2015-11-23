@@ -1,0 +1,112 @@
+doctype html
+html
+    head
+        link(rel="stylesheet" href="./stylesheets/layoutStyle.css")
+        link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet" href="./stylesheets/indexStyle.css")
+        link(rel="stylesheet" href="./stylesheets/navigation.css")
+        link(rel="stylesheet" href="./stylesheets/roll.css")
+        title 小巨人购物商城
+    body
+        .container
+            .main-info
+                #navgation
+                    if navigation.primaryClassification !== undefined
+                        ul.nav-one
+                            each val, index in navigation.primaryClassification
+                                li.li-one
+                                    a(href='/category/#{val}') #{val}
+                                    if navigation.secondaryClassification[index] !== undefined
+                                        ul.nav-two
+                                            each element, x in navigation.secondaryClassification[index]
+                                                li.li-two
+                                                    a(href='/category/#{element}') #{element}
+                    else
+                        li.li-one 没有分类信息
+                #slides
+                    if goods.roll.length !== 0
+                        each x in goods.roll
+                            a(href='/goods/#{x.id}')
+                                img(src="#{x.special_img}")
+                    else
+                        | 目前没有推荐商品
+                #board
+                    #shopping-board
+                        .title-one
+                            h5 商城公告
+                        .board-content
+                            ul
+                                li.content-list
+                                    a(href="/promotion") 1. 开学季是时候给自己换个新手机啦.
+                                li.content-list 
+                                    a(href="/promotion") 2. 白菜价的好货,你确定不进来看看.
+                                li.content-list 
+                                    a(href="/promotion") 3. 运动潮牌,特惠首发,满一百减50.
+                    #news
+                        .title-one
+                            h5 新闻中心
+                        .news-content
+                            ul
+                                li.content-list 
+                                    a(href="#") 庆祝新店开张，满199减50
+                                li.content-list 
+                                    a(href="#") 江浙沪地区包邮
+                                li.content-list 
+                                    a(href="#") 小巨人商城祝您购物愉快
+            #new-product
+                .title-two
+                    h3 新款产品
+                .line
+                .info-show
+                    if goods.newItem.length !== 0
+                        ul.info-list
+                            - var n = 0
+                            each val,i in goods.newItem
+                                if n < 5
+                                    - n++
+
+                                    if i === 0
+                                        li#list
+                                            a(href='/goods/#{val.id}')
+                                                img(src="#{val.img}").big-list
+                                    else 
+                                        li#list
+                                            .picture
+                                                a(href='/goods/#{val.id}')
+                                                    img(src="#{val.img}")
+                                            .word
+                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .price ￥#{val.price}
+                    else
+                        | 没有新款产品
+
+            #popular-product
+                .title-two
+                    h3 热销爆款
+                .line
+                .info-show
+                    if goods.popular.length !== 0
+                        ul.info-list
+                            - var n = 0
+                            each val,i in goods.popular
+                                if n < 5
+                                    - n++
+
+                                    if i === 0
+                                        li#list
+                                            a(href='/goods/#{val.id}')
+                                                img(src="#{val.img}").big-list
+                                    else 
+                                        li#list
+                                            .picture
+                                                a(href='/goods/#{val.id}')
+                                                    img(src="#{val.img}")
+                                            .word
+                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .price ￥#{val.price}
+                    else
+                        | 没有新款产品
+    script(src="./jquery/dist/jquery.js")
+    script(src="./bootstrap/dist/js/bootstrap.js")
+    script(src="./lib/jquery/jquery.slides.min.js")
+    script(src="./javascripts/roll.js")

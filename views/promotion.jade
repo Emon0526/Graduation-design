@@ -1,0 +1,57 @@
+extends ./layout.jade
+block styles
+    link(rel="stylesheet" href="./stylesheets/search.css")
+    link(rel="stylesheet" href="./stylesheets/layoutStyle.css")
+    link(rel="stylesheet" href="./lib/bootstrap/bootstrap.css")
+    link(rel="stylesheet" href="./stylesheets/promotion.css")
+block content
+    include search.html
+    .container
+        .crumb-up-title
+            .crumb-up-slide
+                .crumb-up-clip
+                    ul.crumb-up-list
+                        li
+                            a(href="/category/所有分类" ) 全部
+                        li.bracket
+                            | >
+                        li
+                            a(href="/promotion" ) 促销
+            .promotion-type-box
+                .promotion-type.attr
+                    .attr-type 促销方式
+                    .attr-values
+                        ul.promotion-list
+                            - for (var j = 0; j < promotionTypes.length; j ++)
+                                li
+                                    a(data-id="#{promotionTypes[j].id}" class="promotion-label") #{promotionTypes[j].rule}
+            .attr-extra
+                .attr-extra-border
+            .promotion-box
+                if promotionGoods.length !== 0
+                    - for (var i = 0; i < promotionGoods.length; i++ )
+                        .product
+                            .product-wrap
+                                .product-img-wrap
+                                    a(href="/goods/"+ promotionGoods[i].id class="product-img")
+                                        img(src="#{promotionGoods[i].img}")
+                                .product-img-price
+                                    em
+                                        b ¥
+                                        | #{promotionGoods[i].price}
+                                .product-title
+                                    a(href="/goods/"+ promotionGoods[i].id class="product-title")
+                                        | #{promotionGoods[i].info}
+                else
+                    | 暂无促销商品
+    .panel-heading.text-center.paging
+        a(href class="btn btn-defaults color-font previous-page disabled") 上一页
+        span#number-page-down
+            - for (var p = 0; p < pageCount; p ++)
+                a(class="btn btn-defaults color-font number-page font-color")= p+1
+            | ...
+        a(class="btn btn-defaults color-font next-page active") 下一页
+        | 共有【#{pageCount}】页
+    script(src="./jquery/dist/jquery.js")
+    script(src="./bootstrap/dist/js/bootstrap.js")
+    script(src="./javascripts/promotion.js")

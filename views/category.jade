@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+    head
+        title= "category"
+        link(rel="stylesheet" href="/stylesheets/layoutStyle.css")
+        link(rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/stylesheets/category.css")
+        link(rel="stylesheet" href="/stylesheets/search.css")
+    body
+        include header.html
+        include search.html
+        .container.title-margin
+            .panel.panel-danger
+                .panel-heading
+                    -for (var i = 0; i < breadcrumbs.length; i++) {
+                        a(href="/category/"+breadcrumbs[i]).text-cursor #{breadcrumbs[i]}
+                        if i !== breadcrumbs.length -1
+                            span.glyphicon.glyphicon-chevron-right.char-style
+                    -}
+                .panel-body
+                    for sub in subCategory
+                        a(href="/category/"+sub).col-md-1.category.text-center.text-cursor #{sub}
+                        
+                    .col-md-3.pull-right.paging
+                        .btn.btn-danger.col-md-4.text-center.previous-page.active
+                            span.glyphicon.glyphicon-chevron-left
+                        .col-md-4.text-center.page-detail 
+                            span#current-page #{currentPage}
+                            span / 
+                            span#count-page #{pageCount}
+                        .btn.btn-danger.col-md-4.text-center.next-page.active
+                            span.glyphicon.glyphicon-chevron-right.char-style
+            .panel.panel-danger
+                .panel-body#body.text-center
+                    if data.length !== 0
+                        for goodsInfo in data
+                            .col-md-3.info-margin-bottom
+                                .clearfix
+                                    a(href="/goods/"+ goodsInfo.id)
+                                        img.col-md-12.text-center.img-cursor(src=goodsInfo.img)
+                                .col-md-12
+                                    .pull-left.col-md-6.text-center.border $#{goodsInfo.price}
+                                    .pull-right.col-md-6.text-center.border 销量：#{goodsInfo.sales}
+                                    a(href="/goods/"+ goodsInfo.id)
+                                        .col-md-12.border.info-div.text-cursor #{goodsInfo.info}
+                    else 
+                        |此类无商品
+                .panel-heading.text-center.paging
+                    a.btn.btn-defaults.color-font.previous-page.active 上一页
+                    span#numberPageDown
+                    a.btn.btn-defaults.color-font.next-page.active 下一页
+                    | 共有【#{pageCount}】页
+        include footer.html
+        script(src="/javascripts/category.js")
