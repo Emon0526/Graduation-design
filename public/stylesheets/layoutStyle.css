@@ -28,10 +28,9 @@
     padding: 0 20px;
 }
 .nav-list li:hover {
-    color: #fff;
     text-decoration: none;
     line-height: 50px;
-    background-color: #8FC7C3;
+    background-color: #92D5DE;
 }
 .nav-list li a {
     color: #fff;
