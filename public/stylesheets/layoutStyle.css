@@ -12,22 +12,20 @@
     padding-left: 100px;
     display: inline;
 }
-.logo img {
-    width: 150px;
-    height: 50px;
-}
 #nav a {
     display: block;
     float: left;
+    width: 100%;
 }
 .nav-list {
     display: inline-block;
     float: left;
     height: 40px;
+    margin-left: 500px;
 }
 .nav-list li {
     display: inline-block;
-    margin: 0 10px;
+    padding: 0 20px;
 }
 .nav-list li:hover {
     color: #fff;

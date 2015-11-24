@@ -75,6 +75,9 @@
     margin-left: 10px;
     line-height: 45px;
 }
+.header_right a {
+    text-decoration: none !important;
+}
 .header_right i {
     color: #56C4CF;
     font-size: 20px;
