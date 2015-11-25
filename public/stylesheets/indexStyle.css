@@ -52,7 +52,7 @@ h5 {
 #new-product {
     height: 331px;
     width: 1170px;
-    margin-top: 30px;
+    margin-top: 130px;
 }
 .title-two {
     height: 25px;
@@ -115,4 +115,7 @@ a {
  .content-list a:hover {
     color: #56C4CF;
     text-decoration: none;
+}
+.item img {
+    width: 100%;
 }
