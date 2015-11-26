@@ -88,7 +88,7 @@ h5 {
 .big-list {
     display: block;
     max-width: 100%;
-    height: auto;
+    height: 255px;
 }
 .word {
     height: 40px;
@@ -104,7 +104,7 @@ h5 {
     margin-left: 28px;
     color:#56C4CF;
     font-size: 16px;
-    padding: 10px;
+    padding: 5px;
 }
 #popular-product {
     height: 330px;
