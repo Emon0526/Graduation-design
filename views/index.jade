@@ -22,7 +22,7 @@ html
                             a(href='/goods/1')
                                 img(alt="1" src="./images/banner/lamy.jpg")
                                 .carousel-caption
-                                    h1 Opera
+                                    h1 LAMY
                                     p Opera浏览器，是一款挪威Opera Software
                                     p
                                         a.btn.btn-lg.btn-primary 了解更多
@@ -48,48 +48,12 @@ html
                         ul.info-list
                             - var n = 0
                             each val,i in goods.newItem
-                                if n < 5
-                                    - n++
-
-                                    if i === 0
-                                        li#list
-                                            a(href='/goods/#{val.id}')
-                                                img(src="#{val.img}").big-list
-                                    else 
-                                        li#list
-                                            .picture
-                                                a(href='/goods/#{val.id}')
-                                                    img(src="#{val.img}")
-                                            .word
-                                                a(href='/goods/#{val.id}') #{val.name}
-                                            .price ￥#{val.price}
-                    else
-                        | 暂无数据
-
-            #popular-product
-                .title-two
-                    h3 热销排行
-                .line
-                .info-show
-                    if goods.popular.length !== 0
-                        ul.info-list
-                            - var n = 0
-                            each val,i in goods.popular
-                                if n < 5
-                                    - n++
-
-                                    if i === 0
-                                        li#list
-                                            a(href='/goods/#{val.id}')
-                                                img(src="#{val.img}").big-list
-                                    else 
-                                        li#list
-                                            .picture
-                                                a(href='/goods/#{val.id}')
-                                                    img(src="#{val.img}")
-                                            .word
-                                                a(href='/goods/#{val.id}') #{val.name}
-                                            .price ￥#{val.price}
+                                li#list
+                                    a(href='/goods/#{val.id}')
+                                        img(src="#{val.img}").big-list
+                                        .word
+                                            a(href='/goods/#{val.id}') #{val.name}
+                                        .price ￥#{val.price}
                     else
                         | 暂无数据
     script(src="./jquery/dist/jquery.js")
