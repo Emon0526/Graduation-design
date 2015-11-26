@@ -9,6 +9,7 @@
 .main-info {
     position: relative;
     height: 385px;
+    cursor: hand;
 }
 #board {
     height: 385px;
