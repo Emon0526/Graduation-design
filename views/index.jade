@@ -41,7 +41,7 @@ html
                         span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
             #new-product
                 .title-two
-                    h3 热销排行
+                    h3 新品推荐
                 .line
                 .info-show
                     if goods.newItem.length !== 0
@@ -64,11 +64,11 @@ html
                                                 a(href='/goods/#{val.id}') #{val.name}
                                             .price ￥#{val.price}
                     else
-                        | 没有热销
+                        | 暂无数据
 
             #popular-product
                 .title-two
-                    h3 新品推荐
+                    h3 热销排行
                 .line
                 .info-show
                     if goods.popular.length !== 0
@@ -91,7 +91,7 @@ html
                                                 a(href='/goods/#{val.id}') #{val.name}
                                             .price ￥#{val.price}
                     else
-                        | 没有新款产品
+                        | 暂无数据
     script(src="./jquery/dist/jquery.js")
     script(src="./bootstrap/dist/js/bootstrap.js")
     script(src="./lib/jquery/jquery.slides.min.js")
