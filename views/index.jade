@@ -56,6 +56,37 @@ html
                                         .price ￥#{val.price}
                     else
                         | 暂无数据
+                .info-show
+                    if goods.newItem.length !== 0
+                        ul.info-list
+                            - var n = 0
+                            each val,i in goods.newItem
+                                li#list
+                                    a(href='/goods/#{val.id}')
+                                        img(src="#{val.img}").big-list
+                                        .word
+                                            a(href='/goods/#{val.id}') #{val.name}
+                                        .price ￥#{val.price}
+                    else
+                        | 暂无数据        
+        #momo
+            ul#myTab.nav.nav-tabs(role="tablist")
+                li.active
+                    a(href="#bulletin" role="tab" data-toggle="tab") 文具
+                li
+                    a(href="#rule" role="tab" data-toggle="tab") 办公
+                li    
+                    a(href="#forum" role="tab" data-toggle="tab") 耗材
+                li
+                    a(href="#security" role="tab" data-toggle="tab") 摸摸
+                li
+                    a(href="#welfare" role="tab" data-toggle="tab") 公益
+            #myTabContent.tab-content
+                .tab-pane#bulletin 公告内容面板
+                .tab-pane#rule 规则内容面板
+                .tab-pane#forum 论坛内容面板
+                .tab-pane#security 安全内容面板
+                .tab-pane#welfare 公益内容面板
             .toolbar
                 a(href="javascript:;" class="toolbar-item toolbar-item-weixin")
                     span.toolbar-layer
