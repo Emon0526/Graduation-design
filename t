@@ -293,4 +293,4 @@ Date:   Tue Aug 18 16:58:25 2015 +0800
 
     alter goods render
 
-[33mcommit 
+[33mcommit
