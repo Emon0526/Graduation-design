@@ -40,7 +40,7 @@ html
                     .right.carousel-control(data-slide="next" href="#myCarousel")
                         span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
             #new-product
-                .title-two
+                .title-one
                     h3 新品推荐
                 .line
                 .info-show
@@ -55,21 +55,10 @@ html
                                             a(href='/goods/#{val.id}') #{val.name}
                                         .price ￥#{val.price}
                     else
-                        | 暂无数据
-                .info-show
-                    if goods.newItem.length !== 0
-                        ul.info-list
-                            - var n = 0
-                            each val,i in goods.newItem
-                                li#list
-                                    a(href='/goods/#{val.id}')
-                                        img(src="#{val.img}").big-list
-                                        .word
-                                            a(href='/goods/#{val.id}') #{val.name}
-                                        .price ￥#{val.price}
-                    else
-                        | 暂无数据        
-        #momo
+                        | 暂无数据    
+            .title-two
+                h3 商品分类
+        #tab
             ul#myTab.nav.nav-tabs(role="tablist")
                 li.active
                     a(href="#bulletin" role="tab" data-toggle="tab") 文具
@@ -82,7 +71,8 @@ html
                 li
                     a(href="#welfare" role="tab" data-toggle="tab") 公益
             #myTabContent.tab-content
-                .tab-pane#bulletin 公告内容面板
+                .tab-pane#bulletin.active
+                    #div
                 .tab-pane#rule 规则内容面板
                 .tab-pane#forum 论坛内容面板
                 .tab-pane#security 安全内容面板

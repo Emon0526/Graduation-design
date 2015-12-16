@@ -28,13 +28,6 @@
     width: 275px;
     border: 1px solid #c1c1c1;
 }
-.title-one {
-    height: 35px;
-    width: 275px;
-    background-color: #56C4CF;
-    color: white;
-    margin-top: -10px;
-}
 h5 {
     line-height: 35px;
     margin-left: 12px;
@@ -54,6 +47,11 @@ h5 {
 #new-product {
     width: 1170px;
     margin-top: 150px;
+}
+.title-one {
+    height: 25px;
+    width: 140px;
+    text-align: center;
 }
 .title-two {
     height: 25px;
@@ -172,4 +170,29 @@ a {
 }
 .toolbar-item-top:hover {
     background-position: 0 -736px;
+}
+#tab {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+#tab ul li a {
+    font-size: 20px;
+    padding: 10px 30px;
+    color: #56C4CF;
+}
+.nav-tabs {
+    border-bottom: 1px solid #56C4CF;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #56C4CF;
+    border-bottom-color: transparent;
+}
+#div {
+    height: 1000px;
+    width: 100px;
+    border: 1px solid #aaa;
 }
