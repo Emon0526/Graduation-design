@@ -71,7 +71,12 @@ h5 {
     margin-top: 50px;
     margin-left: 70px;
 }
-
+.fourImg {
+    height: 185px;
+    width: 999px;
+    background-image: url(../images/line.jpg);
+    margin:  0 auto;
+}
 
 
 #list {
