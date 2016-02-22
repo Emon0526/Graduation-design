@@ -9,7 +9,7 @@
 }
 .main-info {
     position: relative;
-    height: 385px;
+    height: 485px;
     cursor: hand;
 }
 #board {
@@ -46,12 +46,6 @@ h5 {
 }
 #new-product {
     width: 1170px;
-    margin-top: 150px;
-}
-.title-one {
-    height: 25px;
-    width: 140px;
-    text-align: center;
 }
 .title-two {
     height: 25px;
@@ -68,6 +62,18 @@ h5 {
     width: 1170px;
     margin-top: 10px;
 }
+
+.threeImg {
+    height: 285px;
+    width: 999px;
+    background-image: url(../images/50.jpg);
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+
+
 #list {
     height: 350px;
     width: 250px;
@@ -195,4 +201,7 @@ a {
     height: 500px;
     width: 500px;
     border: 1px solid #aaa;
+}
+.carousel-caption h1 {
+    color: #fff;
 }

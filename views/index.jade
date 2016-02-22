@@ -54,10 +54,9 @@ html
                         span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
                     .right.carousel-control(data-slide="next" href="#myCarousel")
                         span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
-            #new-product
-                .title-one
-                    h3 新品推荐
                 .line
+            .threeImg
+            #new-product
                 .info-show
                     if goods.newItem.length !== 0
                         ul.info-list
@@ -70,9 +69,7 @@ html
                                             a(href='/goods/#{val.id}') #{val.name}
                                         .price ￥#{val.price}
                     else
-                        | 暂无数据    
-            .title-two
-                h3 商品分类
+                        | 暂无数据
         #tab
             ul#myTab.nav.nav-tabs(role="tablist")
                 li.active
