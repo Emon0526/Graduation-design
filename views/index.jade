@@ -84,16 +84,81 @@ html
                 li
                     a(href="#welfare" role="tab" data-toggle="tab") 公益
             #myTabContent.tab-content
-                .tab-pane#bulletin.active 规则内容面板
-                    #div
-                .tab-pane#rule 规则内容面板
-                    #div
-                .tab-pane#forum 论坛内容面板
-                    #div
-                .tab-pane#security 安全内容面板
-                    #div
-                .tab-pane#welfare 公益内容面板
-                    #div
+                .tab-pane#bulletin.active
+                    #popular-product
+                        .info-show
+                        if goods.popular.length !== 0
+                            ul.info-list
+                                - var n = 0
+                                each val,i in goods.popular
+                                    li#list
+                                        a(href='/goods/#{val.id}')
+                                            img(src="#{val.img}").big-list
+                                            .word
+                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .price ￥#{val.price}
+                        else
+                            | 暂无数据
+                .tab-pane#rule
+                    #popular-product
+                        .info-show
+                        if goods.popular.length !== 0
+                            ul.info-list
+                                - var n = 0
+                                each val,i in goods.popular
+                                    li#list
+                                        a(href='/goods/#{val.id}')
+                                            img(src="#{val.img}").big-list
+                                            .word
+                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .price ￥#{val.price}
+                        else
+                            | 暂无数据
+                .tab-pane#forum
+                    #popular-product
+                        .info-show
+                        if goods.popular.length !== 0
+                            ul.info-list
+                                - var n = 0
+                                each val,i in goods.popular
+                                    li#list
+                                        a(href='/goods/#{val.id}')
+                                            img(src="#{val.img}").big-list
+                                            .word
+                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .price ￥#{val.price}
+                        else
+                            | 暂无数据
+                .tab-pane#security
+                    #popular-product
+                        .info-show
+                        if goods.popular.length !== 0
+                            ul.info-list
+                                - var n = 0
+                                each val,i in goods.popular
+                                    li#list
+                                        a(href='/goods/#{val.id}')
+                                            img(src="#{val.img}").big-list
+                                            .word
+                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .price ￥#{val.price}
+                        else
+                            | 暂无数据
+                .tab-pane#welfare
+                    #popular-product
+                        .info-show
+                        if goods.popular.length !== 0
+                            ul.info-list
+                                - var n = 0
+                                each val,i in goods.popular
+                                    li#list
+                                        a(href='/goods/#{val.id}')
+                                            img(src="#{val.img}").big-list
+                                            .word
+                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .price ￥#{val.price}
+                        else
+                            | 暂无数据
             .toolbar
                 a(href="javascript:;" class="toolbar-item toolbar-item-weixin")
                     span.toolbar-layer
