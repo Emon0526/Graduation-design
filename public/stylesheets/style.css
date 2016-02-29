@@ -98,7 +98,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
 }
 input[type="button"], input[type="submit"] {
     padding: 7px 15px;
-    background-color: #ac2925;
+    background-color: #56C4CF;
     text-align: center;
     border-radius: 5px;
     overflow: hidden;
@@ -108,8 +108,8 @@ input[type="button"], input[type="submit"] {
     box-shadow: 1px 1px 1px rgba(75, 75, 75, 0.3);
 }
 input[type="button"]:hover, input[type="submit"]:hover {
-    background-color: #c9302c;
+    background-color: #47edb5;
 }
 input[type="button"]:active, input[type="submit"]:active {
-    background-color: #c9302c;
+    background-color: #47edb5;
 }
