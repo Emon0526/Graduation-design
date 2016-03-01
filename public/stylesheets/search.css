@@ -82,3 +82,23 @@
     color: #56C4CF;
     font-size: 20px;
 }
+.panel {
+    width: 60%;
+    margin: 0 auto;
+}
+.panel-heading {
+    font-size: 20px;
+}
+.zhifu {
+    text-align: center;
+    height: 450px;
+    background-size: contain;
+    background-image: url(../images/zhifubao.jpg);
+    margin-left: 220px;
+    background-repeat: no-repeat;
+}
+#button {
+    margin-left: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

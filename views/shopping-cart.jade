@@ -21,13 +21,13 @@ html(lang="en")
                                     input( type="checkbox" class="my_all_check" name="all-check" id="add_goods_tobuy_24124")
                                     span(class="alls-check") 全选
                                 li.cart-goods 商品名称
-                                li.cart-promotion 优惠
                                 li.cart-rmb 价格
                                 li.cart-number 数量
                                 li.cart-total 小计
+                                li.cart-total 操作
                                 li.cart-operate
                                     ul.cart-title_leftbg
-                                        li.cart-title-left-bg2 操作
+                                        li.cart-title-left-bg2 备注
 
                     .shopping-cart_goods
                         if data.length === 0
@@ -69,7 +69,7 @@ html(lang="en")
                                 .continue-cart 继续购物
                         li
                             a(href="/pay")
-                                .buy-now 去下单
+                                .buy-now 去付款
         div.modal.fade#confirm-delete
             div.modal-dialog
                 div.modal-content

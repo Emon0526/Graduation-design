@@ -15,6 +15,9 @@
     border: 1px solid #ddd;
     border-radius: 0px 0px 5px 5px;
 }
+.cart-goods-box * {
+    font-size: 18px;
+}
 .cart-a .cart-title-box .cart-title {
     overflow: hidden;
     border-bottom: 1px solid #dddddd;
@@ -65,20 +68,22 @@ li {
 .cart-content {
     width: 988px;
     border-bottom: 1px solid #ddd;
-    margin: 0 auto;
+    margin: 20px auto;
     overflow: hidden;
     background: #f7f7f7;
     margin-top: -10px;
+    padding-top: 20px;
+
 }
 .cart-content li {
     float: left;
     font-size: 12px;
 }
 .cart-content .cart-content-table1 {
-    width: 70px;
     overflow: hidden;
     padding: 10px;
     position: relative;
+    margin-top: 5px;
 }
 .cart-content .cart-content-table2 img {
     width: 50px;
@@ -97,13 +102,13 @@ em {
     width: 128px;
     line-height: 77px;
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
 }
 .cart-content .cart-content-table3 {
-    width: 206px;
+    width: 200px;
     line-height: 77px;
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
 }
 .price, .subtotal {
     width: 128px;
@@ -177,7 +182,7 @@ em {
     padding-top: 34px;
     width: 207px;
     height: 60px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 9px 0 28px 0;
     float: right;
 }
@@ -214,8 +219,7 @@ em {
     margin-left: 5px;
 }
 .img-cursor {
-    width: 40px;
-    height: 40px;
+    width: 80px;
 }
 .cart_goods_delete {
     width: 50px;
@@ -225,13 +229,13 @@ em {
     margin-left: 67px;
 }
 input, select, textarea {
-    width: 12px;
+    width: 22px;
 }
  a:hover {
     text-decoration: none;
 }
 .cart-goods-count {
-    width:33px;
+    width:53px;
     text-align: center;
 }
 .change {
