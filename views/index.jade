@@ -20,7 +20,7 @@ html
                     .carousel-inner
                         .item.active
                             a(href='/goods/1')
-                                img(alt="1" src="./images/banner/lamy.jpg")
+                                img(alt="1" src="./images/banner/lamy.jpg" id="bannerImg")
                                 .carousel-caption
                                     h1 LAMY
                                     p 凌美，来自德国的钢笔。
@@ -28,7 +28,7 @@ html
                                         a.btn.btn-lg.btn-primary 了解更多
                         .item
                             a(href='/goods/2')
-                                img(alt="2" src="./images/banner/lamy1.jpg")
+                                img(alt="2" src="./images/banner/lamy1.jpg" id="bannerImg")
                                 .carousel-caption
                                     h1 LAMY
                                     p 凌美，来自德国的钢笔。
@@ -36,7 +36,7 @@ html
                                         a.btn.btn-lg.btn-primary 了解更多
                         .item
                             a(href='/goods/3')
-                                img(alt="3" src="./images/banner/lamy2.jpg")
+                                img(alt="3" src="./images/banner/lamy2.jpg" id="bannerImg")
                                 .carousel-caption
                                     h1 LAMY
                                     p 凌美，来自德国的钢笔。
@@ -44,7 +44,7 @@ html
                                         a.btn.btn-lg.btn-primary 了解更多
                         .item
                             a(href='/goods/4')
-                                img(alt="4" src="./images/banner/lamy3.jpg")
+                                img(alt="4" src="./images/banner/lamy3.jpg" id="bannerImg")
                                 .carousel-caption
                                     h1 LAMY
                                     p 凌美，来自德国的钢笔。
@@ -58,7 +58,6 @@ html
             .threeImg
             .fourImg
             #new-product
-                .info-show
                     if goods.newItem.length !== 0
                         ul.info-list
                             - var n = 0
@@ -74,89 +73,84 @@ html
         #tab
             ul#myTab.nav.nav-tabs(role="tablist")
                 li.active
-                    a(href="#bulletin" role="tab" data-toggle="tab") 文具
+                    a(href="#bulletin" role="tab" data-toggle="tab" class="tabfont") 文具文具
                 li
-                    a(href="#rule" role="tab" data-toggle="tab") 办公
+                    a(href="#rule" role="tab" data-toggle="tab" class="tabfont") 办公文具
                 li    
-                    a(href="#forum" role="tab" data-toggle="tab") 耗材
+                    a(href="#forum" role="tab" data-toggle="tab" class="tabfont") 耗材文具
                 li
-                    a(href="#security" role="tab" data-toggle="tab") 摸摸
+                    a(href="#security" role="tab" data-toggle="tab" class="tabfont") 摸摸文具
                 li
-                    a(href="#welfare" role="tab" data-toggle="tab") 公益
+                    a(href="#welfare" role="tab" data-toggle="tab" class="tabfont") 公益文具
             #myTabContent.tab-content
                 .tab-pane#bulletin.active
-                    #popular-product
-                        .info-show
+                    #grid_of_3
                         if goods.popular.length !== 0
-                            ul.info-list
+                            ul.grids_of_3
                                 - var n = 0
                                 each val,i in goods.popular
-                                    li#list
+                                    li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
-                                            .word
-                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .word #{val.name}
                                             .price ￥#{val.price}
+                                            .b_btm
                         else
                             | 暂无数据
                 .tab-pane#rule
-                    #popular-product
-                        .info-show
+                    #grid_of_3
                         if goods.newItem.length !== 0
-                            ul.info-list
+                            ul.grids_of_3
                                 - var n = 0
                                 each val,i in goods.newItem
-                                    li#list
+                                    li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
-                                            .word
-                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .word #{val.name}
                                             .price ￥#{val.price}
+                                            .b_btm
                         else
                             | 暂无数据
                 .tab-pane#forum
-                    #popular-product
-                        .info-show
+                    #grid_of_3
                         if goods.roll.length !== 0
-                            ul.info-list
+                            ul.grids_of_3
                                 - var n = 0
                                 each val,i in goods.roll
-                                    li#list
+                                    li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
-                                            .word
-                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .word #{val.name}
                                             .price ￥#{val.price}
+                                            .b_btm
                         else
                             | 暂无数据
                 .tab-pane#security
-                    #popular-product
-                        .info-show
+                    #grid_of_3
                         if goods.popular.length !== 0
-                            ul.info-list
+                            ul.grids_of_3
                                 - var n = 0
                                 each val,i in goods.popular
-                                    li#list
+                                    li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
-                                            .word
-                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .word #{val.name}
                                             .price ￥#{val.price}
+                                            .b_btm
                         else
                             | 暂无数据
                 .tab-pane#welfare
-                    #popular-product
-                        .info-show
+                    #grid_of_3
                         if goods.sale.length !== 0
-                            ul.info-list
+                            ul.grids_of_3
                                 - var n = 0
                                 each val,i in goods.sale
-                                    li#list
+                                    li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
-                                            .word
-                                                a(href='/goods/#{val.id}') #{val.name}
+                                            .word #{val.name}
                                             .price ￥#{val.price}
+                                            .b_btm
                         else
                             | 暂无数据
         
