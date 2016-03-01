@@ -5,9 +5,15 @@
     font-family: Microsoft YaHei,SimSun,Arial;
 }
 .buy-content {
-    width: 1190px;
+    width: 1170px;
     overflow: hidden;
     margin: 0 auto;
+}
+.buy-content * {
+    font-size: 20px;
+}
+.buy-content-text-a1 {
+    font-size: 36px;
 }
 .buy-content-imgbox {
     width: 362px;
@@ -69,7 +75,7 @@ img {
 .buy-content-text .buy-content-text-a2 {
     line-height: 23px;
     font-size: 16px;
-    color: #c30000;
+    color: #56C4CF;
 }
 em {
     font-style: normal;
@@ -121,7 +127,7 @@ ul, ol {
 }
 .buy-content-text-b .buy-content-state1 .buy-content-state-b {
     font-size: 30px;
-    color: #c30000;
+    color: #56C4CF;
     font-weight: bold;
     line-height: 30px;
 }
@@ -190,14 +196,23 @@ ul, ol {
     cursor: pointer;
 }
 .patt_bg_join_cart {
-    background: #c51b00;
+    font-family: 'Microsoft yahei', sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: inline-block;
+    font-size: 1em;
+    background: #555555;
     color: #fff;
-    font-size: 16px;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+
 .patt_bg_join_cart:hover {
-    background: #D9534F;
-    color: #fff;
-    font-size: 16px;
+    background: #56C4CF
 }
 .left{
     float: left;
