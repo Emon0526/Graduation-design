@@ -44,7 +44,7 @@ router.get('/', function(req, res) {
     }).then(function() {
         Goods.findAll({
             where: {
-                recommend: ['roll', 'popular', 'new']
+                recommend: ['roll', 'popular', 'new', 'sale']
             }
         }).then(function(good) {
             var goodsValues = good.map(function(item) {
@@ -59,6 +59,9 @@ router.get('/', function(req, res) {
             });
             goods.newItem = goodsValues.filter(function(item) {
                 return item.recommend === 'new';
+            });
+            goods.sale = goodsValues.filter(function(item) {
+                return item.recommend === 'sale';
             });
         }).then(function() {
             res.render('homepage', {

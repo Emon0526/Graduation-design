@@ -114,9 +114,8 @@ h5 {
     padding: 5px;
 }
 #popular-product {
-    height: 330px;
-    width: 1170px;
-    margin-top: 133px;
+    text-align: center;
+    margin: 4% auto;
 }
 a {
     color:black;
@@ -209,4 +208,9 @@ a {
 }
 .carousel-caption h1 {
     color: #fff;
+}
+#foot1 {
+    width: 1170px;
+    height: 50px;
+    margin: 0 auto;
 }

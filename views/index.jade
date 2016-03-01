@@ -102,10 +102,10 @@ html
                 .tab-pane#rule
                     #popular-product
                         .info-show
-                        if goods.popular.length !== 0
+                        if goods.newItem.length !== 0
                             ul.info-list
                                 - var n = 0
-                                each val,i in goods.popular
+                                each val,i in goods.newItem
                                     li#list
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
@@ -117,10 +117,10 @@ html
                 .tab-pane#forum
                     #popular-product
                         .info-show
-                        if goods.popular.length !== 0
+                        if goods.roll.length !== 0
                             ul.info-list
                                 - var n = 0
-                                each val,i in goods.popular
+                                each val,i in goods.roll
                                     li#list
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
@@ -147,10 +147,10 @@ html
                 .tab-pane#welfare
                     #popular-product
                         .info-show
-                        if goods.popular.length !== 0
+                        if goods.sale.length !== 0
                             ul.info-list
                                 - var n = 0
-                                each val,i in goods.popular
+                                each val,i in goods.sale
                                     li#list
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
@@ -159,6 +159,9 @@ html
                                             .price ￥#{val.price}
                         else
                             | 暂无数据
+        
+        .container
+        #foot1
             .toolbar
                 a(href="javascript:;" class="toolbar-item toolbar-item-weixin")
                     span.toolbar-layer
