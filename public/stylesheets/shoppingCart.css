@@ -79,6 +79,12 @@ li {
     float: left;
     font-size: 12px;
 }
+.cart-content .add-goods-tobuy-choose-0 {
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    margin-top: 25px;
+}
 .cart-content .cart-content-table1 {
     overflow: hidden;
     padding: 10px;

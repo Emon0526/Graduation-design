@@ -13,7 +13,7 @@ $(function() {
         changeCount.call(this);
         total();
     });
-
+    
     $('.cart_goods_delete').on('click', function(event) {
         deleteCurrentGoods.call(this, event);
     });
