@@ -58,10 +58,10 @@ html
             .threeImg
             .fourImg#fourImg
             #new-product
-                    if goods.newItem.length !== 0
+                    if goods.new.length !== 0
                         ul.info-list
                             - var n = 0
-                            each val,i in goods.newItem
+                            each val,i in goods.new
                                 li#list
                                     a(href='/goods/#{val.id}')
                                         img(src="#{val.img}").big-list
@@ -85,10 +85,10 @@ html
             #myTabContent.tab-content
                 .tab-pane#bulletin.active
                     #grid_of_3
-                        if goods.popular.length !== 0
+                        if goods.file.length !== 0
                             ul.grids_of_3
                                 - var n = 0
-                                each val,i in goods.popular
+                                each val,i in goods.file
                                     li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
@@ -99,10 +99,10 @@ html
                             | 暂无数据
                 .tab-pane#rule
                     #grid_of_3
-                        if goods.newItem.length !== 0
+                        if goods.desktop.length !== 0
                             ul.grids_of_3
                                 - var n = 0
-                                each val,i in goods.newItem
+                                each val,i in goods.desktop
                                     li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
@@ -113,10 +113,10 @@ html
                             | 暂无数据
                 .tab-pane#forum
                     #grid_of_3
-                        if goods.roll.length !== 0
+                        if goods.write.length !== 0
                             ul.grids_of_3
                                 - var n = 0
-                                each val,i in goods.roll
+                                each val,i in goods.write
                                     li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
@@ -127,10 +127,10 @@ html
                             | 暂无数据
                 .tab-pane#security
                     #grid_of_3
-                        if goods.popular.length !== 0
+                        if goods.paper.length !== 0
                             ul.grids_of_3
                                 - var n = 0
-                                each val,i in goods.popular
+                                each val,i in goods.paper
                                     li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list
@@ -141,10 +141,10 @@ html
                             | 暂无数据
                 .tab-pane#welfare
                     #grid_of_3
-                        if goods.sale.length !== 0
+                        if goods.machine.length !== 0
                             ul.grids_of_3
                                 - var n = 0
-                                each val,i in goods.sale
+                                each val,i in goods.machine
                                     li.grid1_of_3
                                         a(href='/goods/#{val.id}')
                                             img(src="#{val.img}").big-list

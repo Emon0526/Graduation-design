@@ -44,24 +44,33 @@ router.get('/', function(req, res) {
     }).then(function() {
         Goods.findAll({
             where: {
-                recommend: ['roll', 'popular', 'new', 'sale']
+                recommend: ['file', 'desktop', 'write', 'paper','machine','popular','new']
             }
         }).then(function(good) {
             var goodsValues = good.map(function(item) {
                 return item.dataValues;
             });
 
-            goods.roll = goodsValues.filter(function(item) {
-                return item.recommend === 'roll';
+            goods.file = goodsValues.filter(function(item) {
+                return item.recommend === 'file';
+            });
+            goods.desktop = goodsValues.filter(function(item) {
+                return item.recommend === 'desktop';
+            });
+            goods.write = goodsValues.filter(function(item) {
+                return item.recommend === 'write';
+            });
+            goods.paper = goodsValues.filter(function(item) {
+                return item.recommend === 'paper';
+            });
+            goods.machine = goodsValues.filter(function(item) {
+                return item.recommend === 'machine';
             });
             goods.popular = goodsValues.filter(function(item) {
                 return item.recommend === 'popular';
             });
-            goods.newItem = goodsValues.filter(function(item) {
+            goods.new = goodsValues.filter(function(item) {
                 return item.recommend === 'new';
-            });
-            goods.sale = goodsValues.filter(function(item) {
-                return item.recommend === 'sale';
             });
         }).then(function() {
             res.render('homepage', {
