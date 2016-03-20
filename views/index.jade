@@ -56,7 +56,7 @@ html
                         span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
                 .line
             .threeImg
-            .fourImg
+            .fourImg#fourImg
             #new-product
                     if goods.newItem.length !== 0
                         ul.info-list
@@ -73,15 +73,15 @@ html
         #tab
             ul#myTab.nav.nav-tabs(role="tablist")
                 li.active
-                    a(href="#bulletin" role="tab" data-toggle="tab" class="tabfont") 文具文具
+                    a(href="#bulletin" role="tab" data-toggle="tab" class="tabfont") 文件管理用品
                 li
-                    a(href="#rule" role="tab" data-toggle="tab" class="tabfont") 办公文具
+                    a(href="#rule" role="tab" data-toggle="tab" class="tabfont") 桌面办公文具
                 li    
-                    a(href="#forum" role="tab" data-toggle="tab" class="tabfont") 耗材文具
+                    a(href="#forum" role="tab" data-toggle="tab" class="tabfont") 书写工具
                 li
-                    a(href="#security" role="tab" data-toggle="tab" class="tabfont") 摸摸文具
+                    a(href="#security" role="tab" data-toggle="tab" class="tabfont") 纸制品
                 li
-                    a(href="#welfare" role="tab" data-toggle="tab" class="tabfont") 公益文具
+                    a(href="#welfare" role="tab" data-toggle="tab" class="tabfont") 办公机械
             #myTabContent.tab-content
                 .tab-pane#bulletin.active
                     #grid_of_3
