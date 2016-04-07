@@ -49,6 +49,12 @@ app.use('/goods',goods);
 var promotion = require('./router/promotion');
 app.use('/promotion', promotion);
 
+var about = require('./router/about');
+app.use('/about',about);
+
+var question = require('./router/question');
+app.use('/question',question);
+
 var error = require('./router/error');
 app.use('/error',error);
 
