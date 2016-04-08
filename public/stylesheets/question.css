@@ -1,0 +1,60 @@
+body {
+    background: #f2f2f2;
+}
+.question-container {
+    background: #fff;
+    width: 1100px;
+    margin:0 auto;
+    margin-top:30px;
+}
+.question-container .article-list {
+    padding: 30px;
+    padding-top: 10px;
+}
+.question-container .article-list .list-title-q {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/question/icon_question.png);
+    float: left;
+
+}
+.question-container .article-list .list-title-a {
+    height: 31px;
+    width: 26px;
+    display: inline-block;
+    background-image: url(../img/question/icon_answer.png);
+    float: left;
+}
+.question-container .article-list .question {
+    display: inline-block;
+    color: #262626;
+    font-size:18px;
+}
+.question-container .article-list .question-detail {
+    margin-left: 18px;
+}
+.question-container .article-list .anwser {
+    margin-top:10px;
+    color: #666666;
+    font-size:14px;
+    line-height: 26px;
+}
+.question-container .article-list .anwser-detail {
+    display: block;
+    margin-left: 44px;
+    margin-top: 4px;
+}
+.question-container .article-list .question-line {
+    border-top: 1px solid #dbdbdb;
+    margin: 24px 0px 0px 44px;
+}
+.question-container .article-list li:first-child {
+    margin-top: 30px;
+}
+.question-container .article-list li {
+    margin-top: 24px;
+}
+.question-container .article-list li:last-child .question-line {
+    display: none;
+}
