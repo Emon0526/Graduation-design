@@ -246,7 +246,7 @@ body {
 .rides-cs .cn ul li span { color: #777;}
 .rides-cs .cn ul li a{color: #777;}
 .rides-cs .cn ul li img { vertical-align: middle;}
-.rides-cs .btnOpen, .rides-cs .btnCtn {  position: relative; z-index:9; top:25px; left: 0;  background-image: url(../img/header/shopnc.png); background-repeat: no-repeat; display:block;  height: 146px; padding: 8px;}
+.rides-cs .btnOpen, .rides-cs .btnCtn {  position: relative; z-index:9; top:25px; left: 0;  background-image: url(../images/shopnc.png); background-repeat: no-repeat; display:block;  height: 146px; padding: 8px;}
 .rides-cs .btnOpen { background-position: -410px 0;}
 .rides-cs .btnCtn { background-position: -450px 0;}
 .rides-cs ul li.top { border-bottom: solid #ACE5F9 1px;}
