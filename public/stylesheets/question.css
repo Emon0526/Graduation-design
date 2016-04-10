@@ -6,6 +6,8 @@ body {
     width: 1100px;
     margin:0 auto;
     margin-top:30px;
+    margin-bottom: 30px;
+
 }
 .question-container .article-list {
     padding: 30px;
@@ -15,7 +17,7 @@ body {
     display: inline-block;
     width: 26px;
     height: 26px;
-    background-image: url(../img/question/icon_question.png);
+    background-image: url(../images/icon_question.png);
     float: left;
 
 }
@@ -23,7 +25,7 @@ body {
     height: 31px;
     width: 26px;
     display: inline-block;
-    background-image: url(../img/question/icon_answer.png);
+    background-image: url(../images/icon_answer.png);
     float: left;
 }
 .question-container .article-list .question {

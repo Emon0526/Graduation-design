@@ -21,7 +21,7 @@ body {
     width: 42px;
     height: 24px;
     margin-right: 10px;
-    background: url(../img/about/icon_guanyuwomen.png) no-repeat;
+    background: url(../images/icon_guanyuwomen.png) no-repeat;
     background-size: 42px 24px;
     display: block;
     float: left;
@@ -68,7 +68,7 @@ body {
     width: 42px;
     height: 24px;
     margin-right: 10px;
-    background: url(../img/about/icon_lianxiwomen.png) no-repeat;
+    background: url(../images/icon_lianxiwomen.png) no-repeat;
     background-size: 42px 24px;
     display: block;
     float: left;
